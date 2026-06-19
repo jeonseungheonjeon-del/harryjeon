@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom glowing effects, sleek terminal shadows, and scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: terminal-blink 1s infinite;
+}
+
+/* Preset Custom CSS based on chosen theme */
+.theme-dark-neon {
+  --app-bg: #0b0f19;
+  --panel-bg: rgba(17, 24, 39, 0.8);
+  --border-color: rgba(6, 182, 212, 0.3);
+  --accent-color: #06b6d4;
+  --accent-glow: rgba(6, 182, 212, 0.15);
+  --text-primary: #f3f4f6;
+}
+
+.theme-retro-90s {
+  --app-bg: #008080;
+  --panel-bg: #c0c0c0;
+  --border-color: #ffffff;
+  --accent-color: rgba(0, 0, 128);
+  --accent-glow: none;
+  --text-primary: #000000;
+}
+
+.theme-minimal-swiss {
+  --app-bg: #f9fafb;
+  --panel-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --accent-color: #ef4444;
+  --accent-glow: rgba(239, 68, 68, 0.05);
+  --text-primary: #111827;
+}
+
+.theme-cyberpunk {
+  --app-bg: #1a0826;
+  --panel-bg: #2d0b43;
+  --border-color: #fdec0e;
+  --accent-color: #ff007f;
+  --accent-glow: rgba(255, 0, 127, 0.2);
+  --text-primary: #ffffff;
+}
+
+.theme-vaporwave-sunset {
+  --app-bg: #1f1135;
+  --panel-bg: #321b4f;
+  --border-color: #ff71ce;
+  --accent-color: #01cdfe;
+  --accent-glow: rgba(1, 205, 254, 0.2);
+  --text-primary: #fff;
+}
+
+.theme-brutalist-mono {
+  --app-bg: #ffffff;
+  --panel-bg: #ffffff;
+  --border-color: #000000;
+  --accent-color: #000000;
+  --accent-glow: none;
+  --text-primary: #000000;
+}
+

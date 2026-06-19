@@ -1,0 +1,6 @@
+{
+  "name": "VibeFind",
+  "description": "실시간 데이터셋 필터와 바로가기 숏컷, 그리고 양방향 시뮬레이션 인터페이스가 탑재된 100% 진짜 작동하는 바이브 검색엔진 앱",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
