@@ -1,0 +1,104 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMhCDpCTyzaVjokU5JkPPrS",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jeonseungheonjeon-del/harryjeon/blob/main/up%20and%20down%20game%20by%207th%20grade\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "SFWwhMq2xpUi"
+      },
+      "outputs": [],
+      "source": [
+        "# 이 명령문은 파이썬이 기본으로 가지고 있는 '무작위 숫자 뽑기 기능'을 불러온 것\n",
+        "import random"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "secret_number = random.randint(1, 30)"
+      ],
+      "metadata": {
+        "id": "C33qUOa0x5B_"
+      },
+      "execution_count": 11,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\" 야 컴퓨터! 1부터 30 사이에 숫자 하나를 골랐어, 맞춰봐!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uEuUXJ5ryAKj",
+        "outputId": "b5ea2bf2-2a6e-407a-f7f7-be5004c1d488"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " 야 컴퓨터! 1부터 30 사이에 숫자 하나를 골랐어, 맞춰봐!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# for 을 사용해서 총 5번의 기회를 줍니다\n",
+        "guessed_correctly = False # Flag to track if the number was guessed\n",
+        "for chance in range(1, 100):\n",
+        "  # 사용자의 입력을 받아서 변수의 저장합니다.\n",
+        "  guess = int(input(f\"[{chance}번째 기회] 숫자를 입력하세요: \"))\n",
+        "  # if 를 사용해서 정답인지, 업인지, 다운인지 판별합니다\n",
+        "  if guess == secret_number:\n",
+        "    print(f\"정답이야! {chance}번 만에 맞췄어. 너 구글러 소질 있는데?\")\n",
+        "    guessed_correctly = True\n",
+        "    break # Exit the loop if correct\n",
+        "  elif guess < secret_number:\n",
+        "    print(\"Up! 더 큰 숫자야.\")\n",
+        "  else:\n",
+        "    print(\"Down! 더 작은 숫자야\")\n",
+        "\n",
+        "# 5번의 기회를 다 쓰면 실행되는 코드 (또는 정답을 맞추지 못했을 경우)\n",
+        "if not guessed_correctly:\n",
+        "  print(f\"실패! 정답은 {secret_number}였어. 다음에 다시 도전해봐!\")"
+      ],
+      "metadata": {
+        "id": "oCcsBxEXyP6j"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
